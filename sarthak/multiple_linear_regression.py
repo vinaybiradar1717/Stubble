@@ -20,6 +20,9 @@ imputer= imputer.fit(X[:,[1,2,3,4,5,6,12,13,14,15,16,17,18]])
 X[:,[1,2,3,4,5,6,12,13,14,15,16,17,18]]= imputer.transform(X[:,[1,2,3,4,5,6,12,13,14,15,16,17,18]])
 '''
 
+X=dataset.iloc[:,[1,3,4,5,6]].values
+y=dataset.iloc[:,12].values
+
 '''
 from sklearn.preprocessing import LabelEncoder,OneHotEncoder
 labelencoder_X = LabelEncoder()
@@ -58,20 +61,15 @@ X_opt =X[:,[0,1,2,3,4,5]]
 regressor_OLS = sm.OLS(endog=y,exog=X_opt).fit()
 regressor_OLS.summary()
 
+X_opt =X[:,[0,1,3,4,5]] 
+regressor_OLS = sm.OLS(endog=y,exog=X_opt).fit()
+regressor_OLS.summary()
+
 X_opt =X[:,[0,1,4,5]] 
 regressor_OLS = sm.OLS(endog=y,exog=X_opt).fit()
 regressor_OLS.summary()
 
-X_opt =X[:,[0,3,4,5]] 
-regressor_OLS = sm.OLS(endog=y,exog=X_opt).fit()
-regressor_OLS.summary()
 
-
-X_opt =X[:,[0,4,5]] 
-regressor_OLS = sm.OLS(endog=y,exog=X_opt).fit()
-regressor_OLS.summary()
-
-#H_co p=.05
-X_opt =X[:,[0,5]] 
+X_opt =X[:,[0,1,5]] 
 regressor_OLS = sm.OLS(endog=y,exog=X_opt).fit()
 regressor_OLS.summary()
