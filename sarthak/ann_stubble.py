@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+	# -*- coding: utf-8 -*-
 
 
 # Part 1 - Data Preprocessing
@@ -54,5 +54,24 @@ history=regressor.fit(X_train, y_train, batch_size = 18, epochs = 364)
 
 # Predicting the Test set results
 y_pred=sc_y.inverse_transform(regressor.predict(sc_X.transform(X_test)))
+#print(y_pred,y_test)
+
+
+df = pd.DataFrame({'Actual': y_test.flatten(), 'Predicted': y_pred.flatten()})
+print(df)
+
+df1 = df.head(50)
+df1.plot(kind='bar',figsize=(16,10))
+plt.grid(which='major', linestyle='-', linewidth='0.5', color='green')
+plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+plt.show()
+
+#plt.scatter(X_test, y_test,  color='gray')
+#plt.plot(X_test, y_pred, color='red', linewidth=2)
+#plt.show()
+from sklearn import metrics
+print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))  
+print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))  
+print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
 
 
