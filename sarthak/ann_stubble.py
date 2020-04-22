@@ -36,10 +36,10 @@ from keras.layers import Dense
 regressor = Sequential()
 
 # Adding the input layer and the first hidden layer
-regressor.add(Dense(output_dim = 4,init = 'uniform', activation = 'relu', input_dim = 5))
+regressor.add(Dense(output_dim = 3,init = 'uniform', activation = 'relu', input_dim = 5))
 
 # Adding the second hidden layer
-regressor.add(Dense(output_dim = 4, init = 'uniform', activation = 'relu'))
+regressor.add(Dense(output_dim = 3, init = 'uniform', activation = 'relu'))
 
 # Adding the output layer
 regressor.add(Dense(output_dim = 1, init = 'uniform'))
@@ -48,7 +48,7 @@ regressor.add(Dense(output_dim = 1, init = 'uniform'))
 regressor.compile( loss='mean_squared_error',optimizer = 'adam')
 
 # Fitting the ANN to the Training set
-history=regressor.fit(X_train, y_train, batch_size = 1, epochs = 10)
+history=regressor.fit(X_train, y_train, batch_size = 18, epochs = 364)
 
 # Part 3 - Making the predictions and evaluating the model
 
