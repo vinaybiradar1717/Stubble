@@ -36,6 +36,17 @@ regressor.fit(X_train, y_train)
 # Predicting a new result
 y_pred = regressor.predict(X_test)
 
+
+# Applying k-Fold Cross Validation
+from sklearn.model_selection import cross_val_score
+accuracies = cross_val_score(estimator = regressor, X = X_train, y = y_train, cv = 10)
+accuracies.mean()    #mean of accuracies 
+accuracies.std()    #Standard deviation foraccuracies
+
+
+
+
+
 #@umer addition
 
 #plt.scatter(X_test, y_test,  color='gray')
