@@ -1,0 +1,53 @@
+
+anaconda-navigator // to run spyder for ml
+
+
+installed tensorflow from									https://www.anaconda.com/tensorflow-in-anaconda/
+	conda create -n tensorflow_env tensorflow   //for the first time
+ 	conda activate tensorflow_env	 	    // to activate		
+
+
+tomcat    admin password   
+
+ i installed tom cat from these website								https://www.digitalocean.com/community/tutorials/install-tomcat-9-ubuntu-1804
+ eclipse tomcat problem 									https://askubuntu.com/questions/1094958/unknown-version-of-tomcat-was-specified-tomcat-9-eclipse-java-ee-ubuntu18-04
+
+
+
+
+
+
+for mongodb on local server									mongod --dbpath ~/Documents/datamongo --port 27017
+
+
+
+
+
+https://codeburst.io/hitchhikers-guide-to-back-end-development-with-examples-3f97c70e0073
+
+https://blog.zairza.in/uploading-files-images-to-mongodb-using-gridfs-c16f4eba777
+
+
+
+
+
+MYSQL=========================================================
+
+padmin   ==login
+super-strong-password   ==password
+
+
+
+root very_strong_password //with priveleges
+
+
+
+
+in java whenever u make any project regarding database go to BUILDPATH there search deployement add java build path entruies add jar file
+
+
+
+GOOGLE AUTHENTICATOR
+https://www.linuxbabe.com/ubuntu/ssh-two-factor-authentication-ubuntu-16-04-google-authenticator
+
+https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows
