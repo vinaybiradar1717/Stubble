@@ -39,6 +39,7 @@ y_pred=sc_y.inverse_transform(regressor.predict(sc_X.transform(X_test)))
 
 # Applying k-Fold Cross Validation
 from sklearn.model_selection import cross_val_score
+
 accuracies = cross_val_score(estimator = regressor, X = X_train, y = y_train, cv = 10)
 accuracies.mean()    #mean of accuracies 
 accuracies.std()    #Standard deviation foraccuracies

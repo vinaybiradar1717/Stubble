@@ -61,3 +61,5 @@ grid_search = GridSearchCV(estimator = regressor,
 grid_search = grid_search.fit(X_train, y_train)
 best_accuracy = grid_search.best_score_
 best_parameters = grid_search.best_params_
+print(best_accuracy)
+print(best_parameters)
