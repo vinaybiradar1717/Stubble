@@ -35,7 +35,7 @@ y_train= y_train.flatten()
 
 # Fitting the svr to the dataset
 from sklearn.svm import SVR
-regressor = SVR(kernel='linear',C=10,gamma=.1)
+regressor = SVR(kernel='linear')
 regressor.fit(X_train,y_train)
 
 
