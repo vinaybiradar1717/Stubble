@@ -57,13 +57,117 @@ SAM = pd.DataFrame({'actual':[161. ,154., 248., 145. ,441., 272., 146., 105., 21
 #plt.show()
 
 KNN_A_P = pd.read_csv('KNN_A_P.csv')
-KNN_A_P.plot()
-plt.show()
+KNN_A_P = KNN_A_P.drop(['Unnamed: 0'],axis = 1)
+
+#KNN_A_P.plot()
+#plt.show()
 
 RF_A_P = pd.read_csv('RF_A_P.csv')
-RF_A_P.plot()
-plt.show()
+RF_A_P.columns
+RF_A_P = RF_A_P.drop(['Unnamed: 0'],axis = 1)
+#RF_A_P.plot()
+#plt.show()
+
+
 
 XGB_A_P = pd.read_csv('XGB_A_P.csv')
-XGB_A_P.plot()
+XGB_A_P = XGB_A_P.drop(['Unnamed: 0'],axis = 1)
+#XGB_A_P.plot()
+#plt.show()
+
+
+
+
+###############################################################
+#on testing data
+
+
+
+R2= pd.DataFrame({   'stacked_regression_r2':[0.866] ,
+			'XGB_r2':[0.8103] ,
+			'KNeighborsRegressor_r2':[0.8271],              
+                    'RandomForestRegressor_r2':[0.8579],
+                       
+                      })
+
+R2.plot(kind='bar')
 plt.show()
+
+#staking rege
+#Mean Absolute Error: 21.858742118151397
+#Mean Squared Error: 1829.3994708996127
+#Root Mean Squared Error: 42.7714796435617
+#r ^2  0.8667449110730996
+#explained_variance_score 0.871115275657473
+#max_error 254.51404059246715
+
+
+
+
+
+
+#xgb
+#Mean Absolute Error: 27.777564849853515
+#Mean Squared Error: 2604.003749723459
+#Root Mean Squared Error: 51.0294400294914
+#r ^2  0.8103220446080346
+#explained_variance_score 0.8142751207670083
+#max_error 297.9888000488281
+
+
+#KNN
+##Mean Absolute Error: 25.95
+#Mean Squared Error: 2372.675
+#Root Mean Squared Error: 48.71011188654775
+#r ^2  0.8271722370378978
+#explained_variance_score 0.8313243499729804
+#max_error 280.5
+#RF
+#Mean Absolute Error: 23.422600000000003
+#Mean Squared Error: 1950.5664499999996
+#Root Mean Squared Error: 44.16521764918633
+#r ^2  0.8579190002581772
+#explained_variance_score 0.8588614455082678
+#max_error 265.28
+
+
+#svr
+#Mean Absolute Error: 24.930750874945705
+#Mean Squared Error: 1454.9428139616325
+#Root Mean Squared Error: 38.14371263998344
+#r ^2  0.8940206679065716
+#explained_variance_score 0.8963906428679291
+#max_error 138.50887305810056
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
