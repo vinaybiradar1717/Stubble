@@ -30,10 +30,10 @@ y = data['delhi_wazirpm2.5']
     #plt.ylabel('Delhi pm2.5')
     #plt.show()
 
-r2 = pd.DataFrame({'LinearRegression_r2':[0.7731],'stacked_regression_r2':[0.7731],'lasso_r2':[0.7731],'SVR_r2':[0.7622],'xgb_r2':[0.8514],'GradientBoostingRegressor_r2':[0.8258 ],'KNeighborsRegressor_r2':[0.8313],'RandomForestRegressor_r2':[0.8111]
+r2 = pd.DataFrame({'LinearRegression_r2':[0.7731],'stacked_regression_r2':[0.8557],'lasso_r2':[0.7731],'SVR_r2':[0.7622],'xgb_r2':[0.8514],'GradientBoostingRegressor_r2':[0.8258 ],'KNeighborsRegressor_r2':[0.8313],'RandomForestRegressor_r2':[0.8111]
 })
-#r2.plot(kind='bar')
-#plt.show()
+r2.plot(kind='bar')
+plt.show()
 
 
 RMSE = pd.DataFrame({'LinearRegression_RMSE':[42.8770], 
@@ -90,8 +90,8 @@ R2= pd.DataFrame({   'stacked_regression_r2':[0.866] ,
                        
                       })
 
-R2.plot(kind='bar')
-plt.show()
+#R2.plot(kind='bar')
+#plt.show()
 
 #staking rege
 #Mean Absolute Error: 21.858742118151397
