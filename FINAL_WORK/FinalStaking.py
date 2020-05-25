@@ -216,7 +216,7 @@ stacked_averaged_models = StackingAveragedModels(base_models = (KNN,lr,RF),meta_
 
 score = rmsle_cv(stacked_averaged_models)
 print("Stacking Averaged models RMSE score of training data: {:.4f} ({:.4f})".format(score.mean() , score.std()))
-rsscore = rs_cv(lasso)
+rsscore = rs_cv(stacked_averaged_models)
 print("\nStaking r2 R2 score of training data: {:.4f} ({:.4f})\n".format(rsscore.mean(), rsscore.std()))
 
 
