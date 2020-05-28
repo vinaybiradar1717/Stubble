@@ -1,0 +1,28 @@
+- Cover Page 
+- Acknowledgement
+- Abstract
+- Contents
+		|_	Intro
+				|_	Motivation
+				|_	Scope
+				|_	Objective
+				|_	Proposed Model
+				|_	Organization of Report
+
+		|_	Literature Review 
+		|_	System Analysis and Design
+		|_ 	Modelling and Implementation
+										|_	Use Case Diagram
+										|_	Class Diagram
+										|_	Sequence Diagram
+										|_	Collaboration Diagram
+
+		|_ Testing, Results & Discussion
+									   |_	Testing
+									   |_   Result
+									   |_   Discussion
+
+		|_ Conclusion and Future Work
+		|_Bibliography
+
+- Certificate
